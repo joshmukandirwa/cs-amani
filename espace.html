@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace Élève — Complexe Scolaire Amani</title>
+  <meta name="description" content="Espace Élève du Complexe Scolaire Amani, Goma, Nord-Kivu (RDC) : un espace personnel en préparation pour le suivi scolaire.">
+  <meta name="theme-color" content="#0a2b16">
+  <link rel="icon" type="image/png" href="assets/logo-ecole1.png">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/espace.css">
+  <link rel="stylesheet" href="vote/css/integration.css">
+</head>
+
+<body>
+
+  <!-- ===== SPRITE D'ICÔNES (aucune image externe, aucun emoji) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" />
+        <path d="m22 6-10 7L2 6" />
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="icon-facebook" viewBox="0 0 24 24" stroke="none">
+        <path
+          d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z" />
+      </symbol>
+      <symbol id="icon-youtube" viewBox="0 0 24 24" stroke="none">
+        <path
+          d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z" />
+      </symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24" stroke="none">
+        <path d="M18.9 2H22l-7.4 8.4L23.5 22H16l-5.2-6.8L4.9 22H1.8l7.9-9L1 2h7.7l4.7 6.2zm-1.2 18h1.7L6.4 3.9H4.6z" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24" stroke="none">
+        <path
+          d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.7A1.7 1.7 0 1 1 6.5 5.3a1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.3a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.5z" />
+      </symbol>
+      <symbol id="icon-tiktok" viewBox="0 0 24 24" stroke="none">
+        <path
+          d="M16.6 5.8a4.8 4.8 0 0 1-3.4-1.4v9.9a5.3 5.3 0 1 1-4.6-5.3v2.6a2.7 2.7 0 1 0 1.9 2.6V2h2.6a4.8 4.8 0 0 0 3.5 4.4z" />
+      </symbol>
+      <symbol id="icon-cap" viewBox="0 0 24 24">
+        <path d="M22 10 12 5 2 10l10 5 10-5z" />
+        <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" />
+      </symbol>
+      <symbol id="icon-heart-hands" viewBox="0 0 24 24">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24">
+        <path d="M3 21h18" />
+        <path d="M5 21V7l7-4 7 4v14" />
+        <path d="M9 9h1M14 9h1M9 13h1M14 13h1M9 17h1M14 17h1" />
+      </symbol>
+      <symbol id="icon-check-circle" viewBox="0 0 24 24">
+        <path d="m9 12 2 2 4-4" />
+        <circle cx="12" cy="12" r="10" />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24" stroke="none">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <path d="M10 8.5v7l6-3.5z" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 8v4l3 3" />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="icon-book-open" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+      </symbol>
+      <symbol id="icon-bolt" viewBox="0 0 24 24">
+        <path d="M13 2 3 14h7l-1 8 11-14h-8l1-6z" />
+      </symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </symbol>
+      <symbol id="icon-hammer" viewBox="0 0 24 24">
+        <path d="M2 22h20" />
+        <path d="M4 22V10l8-6 8 6v12" />
+        <path d="M9 22v-6h6v6" />
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z" />
+      </symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24">
+        <path d="M12 2 2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m21 21-4.3-4.3" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="3" y="11" width="18" height="11" rx="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </symbol>
+      <symbol id="icon-eye" viewBox="0 0 24 24">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <circle cx="8.5" cy="8.5" r="1.5" />
+        <path d="m21 15-5-5L5 21" />
+      </symbol>
+      <symbol id="icon-quote" viewBox="0 0 24 24" stroke="none">
+        <path
+          d="M9.6 5C6 6.3 3.6 9.6 3.6 13.3c0 3 1.9 5.3 4.4 5.3 2 0 3.5-1.5 3.5-3.5 0-1.8-1.2-3.2-3-3.4.4-2 2.1-3.6 4-4.3zm10.8 0c-3.6 1.3-6 4.6-6 8.3 0 3 1.9 5.3 4.4 5.3 2 0 3.5-1.5 3.5-3.5 0-1.8-1.2-3.2-3-3.4.4-2 2.1-3.6 4-4.3z" />
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+        <path d="M15 18 9 12l6-6" />
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+        <path d="M9 18l6-6-6-6" />
+      </symbol>
+      <symbol id="icon-results" viewBox="0 0 24 24">
+        <path d="M9 11l3 3L22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </symbol>
+      <symbol id="icon-doc" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <path d="M14 2v6h6" />
+      </symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z" />
+        <path d="M2 21c0-3 1.9-5.4 5.6-6.5C10 13.8 12 13 14 11" />
+      </symbol>
+      <symbol id="icon-briefcase" viewBox="0 0 24 24">
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        <path d="M2 13h20" />
+      </symbol>
+      <symbol id="icon-timetable" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <path d="M16 2v4M8 2v4M3 10h18" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-ecole.png" alt="Complexe Scolaire Amani">
+        <div class="brand-text">
+          <div class="name">COMPLEXE SCOLAIRE AMANI</div>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#accueil">ACCUEIL</a>
+        <a href="apropos.html">À PROPOS</a>
+        <a href="sections.html">SECTIONS</a>
+        <a href="actualites.html">ACTUALITÉS</a>
+        <a href="galerie.html">GALERIE</a>
+        <a href="temoignages.html">TÉMOIGNAGES</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="vote/vote.html">ÉLECTIONS</a>
+      </nav>
+      <div class="nav-cta">
+        <button class="icon-btn" id="searchToggle" aria-label="Rechercher" title="Rechercher">
+          <svg class="icon">
+            <use href="#icon-search" />
+          </svg>
+        </button>
+        <a class="btn-espace" href="espace.html" aria-current="page">
+          <svg class="icon">
+            <use href="#icon-user" />
+          </svg>
+          <span>Espace Élève</span>
+        </a>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="wrap">
+        <svg class="icon">
+          <use href="#icon-search" />
+        </svg>
+        <input type="text" placeholder="Rechercher sur le site… puis Entrée" aria-label="Rechercher">
+        <button id="searchClose" aria-label="Fermer">&times;</button>
+      </div>
+      <p class="wrap search-msg" id="searchMsg"></p>
+    </div>
+  </header>
+
+  <!-- ===== BANDEAU DE TITRE ===== -->
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> / Espace Élève</p>
+      <div class="eyebrow">ESPACE PERSONNEL</div>
+      <h1>Espace Élève</h1>
+      <p>Un espace personnel pour le suivi scolaire des élèves du Complexe Scolaire Amani, bientôt disponible.</p>
+    </div>
+  </section>
+
+  <section class="election-callout" id="amani-election-card">
+  <div class="wrap">
+    <div class="election-callout-inner">
+      <div><div class="eyebrow">ÉLECTION SCOLAIRE</div><h2>Élection du doyen</h2><p>Le scrutin est accessible aux élèves inscrits. Consultez le temps restant et participez avec vos informations scolaires.</p></div>
+      <div class="election-callout-side"><div><small>Temps restant</small><strong id="student-election-time">Chargement…</strong></div><a class="btn btn-primary" href="vote/vote.html">Participer aux élections <svg class="icon"><use href="#icon-arrow-right" /></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESPACE ÉLÈVE ===== -->
+  <section class="espace">
+    <div class="wrap espace-wrap">
+      <div class="espace-copy reveal">
+        <div class="eyebrow">ACCÈS RAPIDE</div>
+        <h2>Tout votre suivi scolaire</h2>
+        <p class="desc">L'Espace Élève est en préparation. Il permettra de se connecter avec son matricule ou son email pour retrouver :</p>
+        <div class="espace-quicklinks">
+          <div class="ql"><svg class="icon">
+              <use href="#icon-results" />
+            </svg> Résultats</div>
+          <div class="ql"><svg class="icon">
+              <use href="#icon-doc" />
+            </svg> Bulletins</div>
+          <div class="ql"><svg class="icon">
+              <use href="#icon-check-circle" />
+            </svg> Absences</div>
+          <div class="ql"><svg class="icon">
+              <use href="#icon-timetable" />
+            </svg> Emploi du temps</div>
+          <div class="ql"><svg class="icon">
+              <use href="#icon-user" />
+            </svg> Profil</div>
+        </div>
+      </div>
+      <div class="espace-card reveal reveal-delay-2">
+        <div class="espace-card-head">
+          <div class="espace-icon"><svg class="icon">
+              <use href="#icon-user" />
+            </svg></div>
+          <div>
+            <h4>Espace Élève</h4>
+            <p>Bientôt disponible</p>
+          </div>
+        </div>
+        <p class="espace-soon" role="note">La connexion n'est pas encore ouverte. Vous pourrez vous connecter ici dès que l'espace sera prêt.</p>
+        <form class="espace-form" onsubmit="return false;">
+          <label>Matricule ou Email
+            <div class="field"><svg class="icon">
+                <use href="#icon-user" />
+              </svg><input type="text" name="identifiant" autocomplete="username" placeholder="Entrez votre matricule ou email" required></div>
+          </label>
+          <label>Mot de passe
+            <div class="field"><svg class="icon">
+                <use href="#icon-lock" />
+              </svg><input type="password" name="motdepasse" autocomplete="current-password" placeholder="Entrez votre mot de passe" required><button type="button"
+                class="pw-toggle" aria-label="Afficher le mot de passe" aria-pressed="false"><svg class="icon">
+                  <use href="#icon-eye" />
+                </svg></button></div>
+          </label>
+          <div class="espace-row">
+            <label class="remember"><input type="checkbox" name="souvenir"> Se souvenir de moi</label>
+            <a href="#" class="page-link">Mot de passe oublié&nbsp;?</a>
+          </div>
+          <button class="btn btn-primary espace-submit" type="submit">Se connecter <svg class="icon">
+              <use href="#icon-arrow-right" />
+            </svg></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="reveal footer-brand">
+            <a class="brand" href="index.html">
+              <img src="assets/logo-ecole1.png" alt="Complexe Scolaire Amani">
+              <div class="brand-text">
+                <div class="name">COMPLEXE SCOLAIRE AMANI</div>
+              </div>
+            </a>
+            <p class="footer-tagline">Discipline – Amour – Enseignement de qualité</p>
+            <div class="foot-social">
+              <a href="#" class="ext-link" aria-label="Facebook"><svg class="icon">
+                  <use href="#icon-facebook" />
+                </svg></a>
+              <a href="#" class="ext-link" aria-label="TikTok"><svg class="icon">
+                  <use href="#icon-tiktok" />
+                </svg></a>
+              <a href="#" class="ext-link" aria-label="X"><svg class="icon">
+                  <use href="#icon-x" />
+                </svg></a>
+              <a href="#" class="ext-link" aria-label="LinkedIn"><svg class="icon">
+                  <use href="#icon-linkedin" />
+                </svg></a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <h5>LIENS RAPIDES</h5>
+            <ul class="foot-links">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="apropos.html">À propos</a></li>
+              <li><a href="sections.html">Sections</a></li>
+              <li><a href="actualites.html">Actualités</a></li>
+              <li><a href="galerie.html">Galerie</a></li>
+              <li><a href="temoignages.html">Témoignages</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="vote/vote.html">Élections</a></li>
+            </ul>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <h5>CONTACT</h5>
+            <ul class="foot-contact">
+              <li><svg class="icon">
+                  <use href="#icon-pin" />
+                </svg> Quartier Kyeshero, Commune de Goma, Nord-Kivu – RDC</li>
+              <li><svg class="icon">
+                  <use href="#icon-phone" />
+                </svg> +243 97 000 0000</li>
+              <li><svg class="icon">
+                  <use href="#icon-mail" />
+                </svg> info@amani-edu.cd</li>
+            </ul>
+          </div>
+
+          <div class="reveal reveal-delay-3">
+            <h5>DERNIÈRES ACTUALITÉS</h5>
+            <div class="news-item">
+              <img src="assets/photos/amani-group.jpeg" alt="">
+              <div>
+                <div class="date">26 août 2026</div>
+                <p>Rentrée scolaire 2026–2027</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <img src="assets/photos/amani-reading.jpeg" alt="">
+              <div>
+                <div class="date">18 août 2026</div>
+                <p>Remise des prix du trimestre</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>&copy; 2026 Complexe Scolaire Amani. Tous droits réservés</span>
+          <span class="legal">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="confidentialite.html">Politique de confidentialité</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="credit-bar">
+        <div class="wrap">
+          <div class="credit-text">
+            <strong>Web developer :</strong> Josué Mukandirwa<br>
+            Contact : <a href="tel:+243995876855">+243 995 876 855</a> ·
+            Email : <a href="mailto:Joshmukandirwa@gmail.com">Joshmukandirwa@gmail.com</a>
+          </div>
+          <a class="credit-logo ext-link" href="#" aria-label="EbenJosh Tech & Services">
+            <img src="assets/ebenjosh-logo.png" alt="EbenJosh Tech & Services">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/espace.js"></script>
+<script src="vote/js/config.js"></script><script src="vote/js/backend.js"></script><script>Backend.config(function(r){if(!r||!r.ok)return;var t=document.getElementById("student-election-time");function f(){var x=r.endAt-(Date.now()+((r.serverNow||Date.now())-Date.now()));if(x<=0){t.textContent="Scrutin terminé";return}var s=Math.floor(x/1000),d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),q=s%60;t.textContent=(d?d+" j ":"")+(h<10?"0":"")+h+":"+(m<10?"0":"")+m+":"+(q<10?"0":"")+q}f();setInterval(f,1000)});</script>
+</body>
+
+</html>

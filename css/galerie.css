@@ -1,0 +1,92 @@
+/* ============================================================
+   GALERIE.CSS — styles propres à la page Galerie uniquement.
+   Le navbar et le footer sont dans css/common.css.
+   ============================================================ */
+
+.gallery{padding:70px 0 90px; background:#fff;}
+.gallery-intro{max-width:60ch; color:var(--ink-soft); margin-bottom:36px;}
+
+.gallery-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:16px;}
+.gallery-item{
+  border:none; padding:0; margin:0; background:none; cursor:zoom-in;
+  border-radius:var(--radius-m); overflow:hidden; position:relative;
+  aspect-ratio:4/3;
+}
+.gallery-item img{width:100%; height:100%; object-fit:cover; transition:transform .35s ease;}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-item .gallery-zoom{
+  position:absolute; right:10px; bottom:10px; width:32px; height:32px; border-radius:50%;
+  background:rgba(10,43,22,.65); display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .25s ease;
+}
+.gallery-item:hover .gallery-zoom{opacity:1;}
+.gallery-item .gallery-zoom .icon{width:15px; height:15px; color:#fff;}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  position:fixed; inset:0; z-index:300; background:rgba(8,20,13,.96);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; pointer-events:none; transition:opacity .25s ease;
+}
+.lightbox.open{opacity:1; pointer-events:auto;}
+.lightbox-inner{position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center; padding:70px 70px;}
+.lightbox img{max-width:100%; max-height:100%; border-radius:var(--radius-s); box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.lightbox-close{
+  position:absolute; top:20px; right:24px; width:42px; height:42px; border-radius:50%;
+  background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.25); color:#fff;
+  display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s ease;
+}
+.lightbox-close:hover{background:rgba(255,255,255,.2);}
+.lightbox-close .icon{width:18px; height:18px;}
+.lightbox-nav{
+  position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%;
+  background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.25); color:#fff;
+  display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s ease;
+}
+.lightbox-nav:hover{background:rgba(255,255,255,.2);}
+.lightbox-nav .icon{width:20px; height:20px;}
+.lightbox-prev{left:16px;}
+.lightbox-next{right:16px;}
+.lightbox-counter{
+  position:absolute; left:50%; bottom:18px; transform:translateX(-50%);
+  color:#cfe6d7; font-size:.82rem; font-weight:600; letter-spacing:.03em;
+}
+
+.gallery-grid > *{min-width:0;}
+.gallery-item:focus-visible{outline:3px solid var(--green-500); outline-offset:3px;}
+.lightbox img{object-fit:contain; touch-action:pan-y;}
+.lightbox-inner{min-width:0;}
+
+/* Écrans tactiles : l'icône de zoom reste visible (pas de survol) */
+@media (hover:none){
+  .gallery-item .gallery-zoom{opacity:1;}
+  .gallery-item:hover img{transform:none;}
+}
+
+/* ===== RESPONSIVE — Galerie uniquement ===== */
+@media (max-width:980px){
+  .gallery{padding:52px 0 64px;}
+  .gallery-grid{grid-template-columns:repeat(2, 1fr); gap:14px;}
+}
+@media (max-width:640px){
+  .gallery{padding:40px 0 48px;}
+  .gallery-grid{gap:10px;}
+  .lightbox-inner{padding:64px 12px 84px;}
+  .lightbox-close{top:12px; right:12px; width:38px; height:38px;}
+  /* boutons précédent/suivant sous la photo, pour ne pas la cacher */
+  .lightbox-nav{top:auto; bottom:14px; transform:none; width:40px; height:40px;}
+  .lightbox-prev{left:calc(50% - 90px);}
+  .lightbox-next{right:calc(50% - 90px);}
+  .lightbox-counter{bottom:24px;}
+}
+@media (max-width:340px){
+  .gallery{padding:28px 0 36px;}
+  .gallery-grid{grid-template-columns:1fr; gap:10px;}
+  .gallery-item .gallery-zoom{width:28px; height:28px; right:8px; bottom:8px;}
+  .lightbox-inner{padding:56px 6px 76px;}
+  .lightbox-close{top:8px; right:8px; width:34px; height:34px;}
+  .lightbox-nav{width:36px; height:36px; bottom:12px;}
+  .lightbox-prev{left:calc(50% - 76px);}
+  .lightbox-next{right:calc(50% - 76px);}
+  .lightbox-counter{font-size:.74rem; bottom:22px;}
+}

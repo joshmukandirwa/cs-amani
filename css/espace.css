@@ -1,0 +1,76 @@
+/* ============================================================
+   ESPACE.CSS — styles propres à la page Espace Élève uniquement.
+   Le navbar et le footer sont dans css/common.css.
+   ============================================================ */
+
+/* ===== ESPACE ÉLÈVE ===== */
+.espace{background:var(--cream); padding:90px 0;}
+.espace-wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;}
+.espace-copy h2{margin-bottom:14px; max-width:14ch;}
+.espace-copy .desc{color:var(--ink-soft); margin-bottom:26px; max-width:48ch;}
+.espace-quicklinks{display:flex; flex-wrap:wrap; gap:12px;}
+.espace-quicklinks .ql{display:flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--line); border-radius:999px; padding:9px 16px; font-size:.82rem; font-weight:600; color:var(--ink);}
+.espace-quicklinks .ql .icon{width:15px; height:15px; color:var(--green-600);}
+.espace-card{background:var(--green-950); color:#fff; border-radius:var(--radius-m); padding:32px; box-shadow:var(--shadow-1);}
+.espace-card-head{display:flex; align-items:center; gap:14px; margin-bottom:24px;}
+.espace-icon{width:44px; height:44px; border-radius:50%; background:rgba(143,209,164,.15); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.espace-icon .icon{width:20px; height:20px; color:#8fd1a4;}
+.espace-card-head h4{color:#fff; font-size:1.05rem;}
+.espace-card-head p{font-size:.8rem; color:#a9c9b6;}
+.espace-form label{display:block; font-size:.8rem; color:#cfe6d7; margin-bottom:16px;}
+.field{display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:10px; padding:11px 14px; margin-top:6px;}
+.field .icon{width:16px; height:16px; color:#8fd1a4; flex-shrink:0;}
+.field input{flex:1; border:none; background:none; color:#fff; font-size:.92rem; outline:none;}
+.field input::placeholder{color:#7f9b8b;}
+.pw-toggle{border:none; background:none; cursor:pointer; color:#8fd1a4; display:flex;}
+.pw-toggle .icon{width:16px; height:16px;}
+.espace-row{display:flex; align-items:center; justify-content:space-between; font-size:.78rem; margin-bottom:20px; flex-wrap:wrap; gap:8px;}
+.espace-row a{color:#8fd1a4;}
+.remember{display:flex; align-items:center; gap:8px; color:#cfe6d7;}
+.espace-submit{width:100%; justify-content:center;}
+.espace-submit:disabled{opacity:.85; cursor:wait;}
+.btn-spinner{width:15px; height:15px; border-radius:50%; border:2px solid rgba(255,255,255,.4); border-top-color:#fff; animation:spin .7s linear infinite; display:inline-block;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.espace-toast{margin-top:16px; text-align:center; background:rgba(143,209,164,.15); border:1px solid rgba(143,209,164,.4); color:#c8ecd4; font-size:.82rem; font-weight:600; padding:10px 14px; border-radius:10px; opacity:0; max-height:0; overflow:hidden; transition:opacity .3s ease, max-height .3s ease, padding .3s ease;}
+.espace-toast.show{opacity:1; max-height:60px; padding:10px 14px;}
+
+.espace-soon{font-size:.8rem; color:#c8ecd4; background:rgba(143,209,164,.12); border:1px dashed rgba(143,209,164,.45); border-radius:10px; padding:10px 14px; margin-bottom:20px; line-height:1.45;}
+.espace-wrap > *{min-width:0;}
+.espace-form .field input{min-width:0; width:100%;}
+.espace-card-head > div:last-child{min-width:0;}
+.espace-toast{overflow-wrap:anywhere;}
+.pw-toggle{flex-shrink:0; padding:4px;}
+.pw-toggle:focus-visible,.espace-row a:focus-visible{outline:2px solid #8fd1a4; outline-offset:2px; border-radius:4px;}
+
+/* ===== RESPONSIVE — Espace Élève uniquement ===== */
+@media (max-width:980px){
+  .espace{padding:64px 0;}
+  .espace-wrap{grid-template-columns:1fr; gap:44px;}
+}
+@media (max-width:640px){
+  .espace{padding:44px 0;}
+  .espace-card{padding:24px 20px;}
+  .espace-quicklinks{gap:8px;}
+  .espace-quicklinks .ql{padding:8px 13px;}
+}
+@media (max-width:380px){
+  .espace{padding:32px 0;}
+  .espace-wrap{gap:32px;}
+  .espace-card{padding:18px 12px;}
+  .espace-card-head{gap:10px; margin-bottom:16px;}
+  .espace-icon{width:36px; height:36px;}
+  .espace-card-head h4{font-size:.95rem;}
+  .espace-soon{font-size:.76rem; padding:8px 10px; margin-bottom:16px;}
+  .espace-form label{margin-bottom:12px;}
+  .field{padding:9px 10px; gap:8px;}
+  .field input{font-size:.85rem;}
+  .espace-row{margin-bottom:16px;}
+}
+@media (max-width:300px){
+  .espace{padding:24px 0;}
+  .espace-card{padding:14px 8px;}
+  .espace-card-head .espace-icon{display:none;}
+  .espace-form .field > .icon:first-child{display:none;}
+  .espace-quicklinks .ql{font-size:.76rem; padding:7px 10px; gap:6px;}
+  .espace-row{font-size:.72rem;}
+}

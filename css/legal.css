@@ -1,0 +1,18 @@
+/* ============================================================
+   LEGAL.CSS — styles des pages Mentions légales et Confidentialité.
+   Le navbar et le footer sont dans css/common.css.
+   ============================================================ */
+
+.legal-section{background:var(--cream); padding:80px 0;}
+.legal-content{max-width:760px; margin:0 auto; background:#fff; border:1px solid var(--line); border-radius:var(--radius-m); padding:44px;}
+.legal-content h2{font-size:1.15rem; margin:34px 0 10px;}
+.legal-content h2:first-of-type{margin-top:0;}
+.legal-content p, .legal-content li{color:var(--ink-soft); font-size:.94rem; line-height:1.7;}
+.legal-content p{margin-bottom:12px;}
+.legal-content ul{margin:0 0 12px 20px; list-style:disc;}
+.legal-content a{color:var(--green-700); font-weight:600;}
+.legal-updated{font-size:.8rem; color:var(--ink-soft); margin-bottom:26px;}
+
+@media (max-width:640px){
+  .legal-content{padding:28px 20px;}
+}
